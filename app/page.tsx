@@ -7,11 +7,12 @@ export default async function Home() {
   );
   const res = await data.json();
   return (
-    <main className="bg-black text-white">
-      <h1>test</h1>
+    <main className="text-white">
+      <div className="grid gap-16 grid-cols-fluid">
       {res.results?.map((movie: MovieProps) => (
         <Movie key={movie.id} movie={movie} />
       ))}
+      </div>
     </main>
   );
 }

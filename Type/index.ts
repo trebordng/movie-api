@@ -1,6 +1,7 @@
 export interface MovieProps {
   title: string;
-  id: number;
+  id: string;
   poster_path:string;
   release_date:string;
+  [key: string]: any; // Add index signature
 }
